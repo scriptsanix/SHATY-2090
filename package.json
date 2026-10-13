@@ -1,0 +1,36 @@
+
+{
+  "name": "shaty-player",
+  "version": "1.0.0",
+  "description": "SHATY Player 2090",
+  "main": "main.js",
+  "author": "San",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "*",
+    "electron-builder": "*"
+  },
+  "build": {
+    "appId": "com.shaty.player",
+    "productName": "SHATY Player 2090",
+    "directories": {
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "package.json"
+    ],
+    "win": {
+     "icon": "build/icon.ico",
+      "target": [
+        "portable"
+      ]
+    }
+  }
+}
